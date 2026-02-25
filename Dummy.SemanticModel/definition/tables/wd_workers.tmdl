@@ -1,0 +1,338 @@
+table wd_workers
+	lineageTag: 549634d3-e49d-4a51-a711-285b5c2de069
+
+	column 'Report_Entry.Active_Status'
+		dataType: int64
+		formatString: 0
+		lineageTag: b286ba4c-6192-4c14-a045-eff8fc225599
+		summarizeBy: none
+		sourceColumn: Report_Entry.Active_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Address_Full'
+		dataType: string
+		lineageTag: a05d361e-6eb5-40e3-84a9-2c7969f24a15
+		summarizeBy: none
+		sourceColumn: Report_Entry.Address_Full
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Business_Title'
+		dataType: string
+		lineageTag: 5585a302-9fc9-4839-8189-e440284931e6
+		summarizeBy: none
+		sourceColumn: Report_Entry.Business_Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Contingent_Worker_Type'
+		dataType: string
+		lineageTag: 59160ad0-1ab7-4984-b49f-7ff138e8d25f
+		summarizeBy: none
+		sourceColumn: Report_Entry.Contingent_Worker_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Cost_Center'
+		dataType: string
+		lineageTag: a1c963cf-f789-4b0a-9bd8-0b906849c809
+		summarizeBy: none
+		sourceColumn: Report_Entry.Cost_Center
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Date_Of_Birth'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e46cd21e-b0e0-4ea1-a9e3-27ec197e47b5
+		summarizeBy: none
+		sourceColumn: Report_Entry.Date_Of_Birth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Report_Entry.Direct_Manager'
+		dataType: string
+		lineageTag: 9d232e22-1576-4882-8e42-96279ac04e8f
+		summarizeBy: none
+		sourceColumn: Report_Entry.Direct_Manager
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Email_Home'
+		dataType: string
+		lineageTag: 895ee788-6fbd-4513-9d6c-523991c1fd7b
+		summarizeBy: none
+		sourceColumn: Report_Entry.Email_Home
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Email_Personal'
+		dataType: string
+		lineageTag: 6e4d444d-df91-4b90-a4e5-ebfa34cfe2ea
+		summarizeBy: none
+		sourceColumn: Report_Entry.Email_Personal
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Email_Work'
+		dataType: string
+		lineageTag: a18539f1-6452-4735-8932-fa963b149319
+		summarizeBy: none
+		sourceColumn: Report_Entry.Email_Work
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Emergency_Contacts'
+		dataType: string
+		lineageTag: 241d4dcd-379f-4133-8185-9f9291ee7602
+		summarizeBy: none
+		sourceColumn: Report_Entry.Emergency_Contacts
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Experience_Start_Date'
+		dataType: string
+		lineageTag: 1e0d0997-ba98-4f38-ba5c-9c94d3f0f6bb
+		summarizeBy: none
+		sourceColumn: Report_Entry.Experience_Start_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Gender'
+		dataType: string
+		lineageTag: 7689279b-fa90-459d-ad13-2bfd66acb262
+		summarizeBy: none
+		sourceColumn: Report_Entry.Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Hire_Date'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 27db20e1-1cd1-4376-a125-1dac67cd2906
+		summarizeBy: none
+		sourceColumn: Report_Entry.Hire_Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Report_Entry.Home_Address'
+		dataType: string
+		lineageTag: 6d2d47a9-8a93-40f7-8681-02e30f700cc0
+		summarizeBy: none
+		sourceColumn: Report_Entry.Home_Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Home_City'
+		dataType: string
+		lineageTag: 79313767-acfd-498f-84a3-402dd6c8b67b
+		summarizeBy: none
+		sourceColumn: Report_Entry.Home_City
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Home_State'
+		dataType: string
+		lineageTag: a536ca93-7474-4db8-a204-4792981285c0
+		summarizeBy: none
+		sourceColumn: Report_Entry.Home_State
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Job_Title'
+		dataType: string
+		lineageTag: 91ebfb31-63ae-4a9a-a3ff-429b253ed9bd
+		summarizeBy: none
+		sourceColumn: Report_Entry.Job_Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Location'
+		dataType: string
+		lineageTag: 12cb31fe-1f52-4e42-8fc2-745a326b9fc4
+		summarizeBy: none
+		sourceColumn: Report_Entry.Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Management_Level'
+		dataType: string
+		lineageTag: 9f27b17a-0d29-41bc-b7b0-cba6ce869df2
+		summarizeBy: none
+		sourceColumn: Report_Entry.Management_Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Mobile_Phones'
+		dataType: string
+		lineageTag: 4b2f2934-51df-4432-928f-57482487544b
+		summarizeBy: none
+		sourceColumn: Report_Entry.Mobile_Phones
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Pay_Rate_Type'
+		dataType: string
+		lineageTag: defdb779-41b0-416a-bf67-be6bfef20d66
+		summarizeBy: none
+		sourceColumn: Report_Entry.Pay_Rate_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Phone_Numbers'
+		dataType: string
+		lineageTag: d763c9a7-361c-40c9-a6d6-baf14c23969a
+		summarizeBy: none
+		sourceColumn: Report_Entry.Phone_Numbers
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Real_Hired_Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ec20acc3-affa-4982-bb04-29a06b3f5d6f
+		summarizeBy: none
+		sourceColumn: Report_Entry.Real_Hired_Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Report_Entry.Reporting_Enterprise'
+		dataType: string
+		lineageTag: 8a6843fe-6ae0-4095-8a9f-1c7dd0d7cabc
+		summarizeBy: none
+		sourceColumn: Report_Entry.Reporting_Enterprise
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Supervisory_Organization'
+		dataType: string
+		lineageTag: f86b64cf-0b7e-4d7f-a9fa-f7b5820138bb
+		summarizeBy: none
+		sourceColumn: Report_Entry.Supervisory_Organization
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Sales_Level'
+		dataType: string
+		lineageTag: 31c2c615-930f-4fa7-8eda-f3e06fa3a7e2
+		summarizeBy: none
+		sourceColumn: Report_Entry.Sales_Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Termination_Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b2980169-6c77-4d0b-8efc-bb0764fb8224
+		summarizeBy: none
+		sourceColumn: Report_Entry.Termination_Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Report_Entry.Worker'
+		dataType: string
+		lineageTag: f84e4458-af35-45be-a014-65d887b86b39
+		summarizeBy: none
+		sourceColumn: Report_Entry.Worker
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Worker_Company'
+		dataType: string
+		lineageTag: b504400b-e3f4-420f-bd3a-2c4cc674841c
+		summarizeBy: none
+		sourceColumn: Report_Entry.Worker_Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Worker_First_Name'
+		dataType: string
+		lineageTag: ea425f98-75c8-48ef-ae06-f9d4b2e4a119
+		summarizeBy: none
+		sourceColumn: Report_Entry.Worker_First_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Worker_Full_Name'
+		dataType: string
+		lineageTag: 772b65a3-62f0-4ee7-aab3-da5fca0428fa
+		summarizeBy: none
+		sourceColumn: Report_Entry.Worker_Full_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Worker_ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: d5880bf8-0f02-46b0-ac19-74b0952a4fd9
+		summarizeBy: none
+		sourceColumn: Report_Entry.Worker_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Worker_Last_Name'
+		dataType: string
+		lineageTag: 10866722-151d-4958-af46-e70761e6e089
+		summarizeBy: none
+		sourceColumn: Report_Entry.Worker_Last_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Worker_Middle_Name'
+		dataType: string
+		lineageTag: d8884989-c449-4e32-84bb-565c422433b0
+		summarizeBy: none
+		sourceColumn: Report_Entry.Worker_Middle_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Worker_Sub_Type'
+		dataType: string
+		lineageTag: af9371f5-1443-421a-8d7e-abff2f9c6347
+		summarizeBy: none
+		sourceColumn: Report_Entry.Worker_Sub_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Worker_Type'
+		dataType: string
+		lineageTag: b63aacef-ed64-4352-a218-07639ff5e262
+		summarizeBy: none
+		sourceColumn: Report_Entry.Worker_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Report_Entry.Zip_Code'
+		dataType: string
+		lineageTag: 88370baf-d943-4f70-97a0-28f343f03b93
+		summarizeBy: none
+		sourceColumn: Report_Entry.Zip_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition wd_workers = m
+		mode: import
+		queryGroup: 'Workday - Data Sources'
+		source =
+				let
+				    Source = Json.Document(Web.Contents(json_wd_workers)),
+				    #"Converted to Table" = Table.FromRecords({Source}),
+				    #"Expanded Report_Entry" = Table.ExpandListColumn(#"Converted to Table", "Report_Entry"),
+				    #"Expanded Report_Entry1" = Table.ExpandRecordColumn(#"Expanded Report_Entry", "Report_Entry", {"Active_Status", "Address_Full", "Business_Title", "Contingent_Worker_Type", "Cost_Center", "Date_Of_Birth", "Direct_Manager", "Email_Home", "Email_Personal", "Email_Work", "Emergency_Contacts", "Experience_Start_Date", "Gender", "Hire_Date", "Home_Address", "Home_City", "Home_State", "Job_Title", "Location", "Management_Level", "Mobile_Phones", "Pay_Rate_Type", "Phone_Numbers", "Real_Hired_Date", "Reporting_Enterprise", "Supervisory_Organization", "Sales_Level", "Termination_Date", "Worker", "Worker_Company", "Worker_First_Name", "Worker_Full_Name", "Worker_ID", "Worker_Last_Name", "Worker_Middle_Name", "Worker_Sub_Type", "Worker_Type", "Zip_Code"}, {"Report_Entry.Active_Status", "Report_Entry.Address_Full", "Report_Entry.Business_Title", "Report_Entry.Contingent_Worker_Type", "Report_Entry.Cost_Center", "Report_Entry.Date_Of_Birth", "Report_Entry.Direct_Manager", "Report_Entry.Email_Home", "Report_Entry.Email_Personal", "Report_Entry.Email_Work", "Report_Entry.Emergency_Contacts", "Report_Entry.Experience_Start_Date", "Report_Entry.Gender", "Report_Entry.Hire_Date", "Report_Entry.Home_Address", "Report_Entry.Home_City", "Report_Entry.Home_State", "Report_Entry.Job_Title", "Report_Entry.Location", "Report_Entry.Management_Level", "Report_Entry.Mobile_Phones", "Report_Entry.Pay_Rate_Type", "Report_Entry.Phone_Numbers", "Report_Entry.Real_Hired_Date", "Report_Entry.Reporting_Enterprise", "Report_Entry.Supervisory_Organization", "Report_Entry.Sales_Level", "Report_Entry.Termination_Date", "Report_Entry.Worker", "Report_Entry.Worker_Company", "Report_Entry.Worker_First_Name", "Report_Entry.Worker_Full_Name", "Report_Entry.Worker_ID", "Report_Entry.Worker_Last_Name", "Report_Entry.Worker_Middle_Name", "Report_Entry.Worker_Sub_Type", "Report_Entry.Worker_Type", "Report_Entry.Zip_Code"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Report_Entry1",{{"Report_Entry.Active_Status", Int64.Type}, {"Report_Entry.Address_Full", type text}, {"Report_Entry.Business_Title", type text}, {"Report_Entry.Contingent_Worker_Type", type any}, {"Report_Entry.Cost_Center", type text}, {"Report_Entry.Date_Of_Birth", type date}, {"Report_Entry.Direct_Manager", type text}, {"Report_Entry.Email_Home", type text}, {"Report_Entry.Email_Personal", type text}, {"Report_Entry.Email_Work", type text}, {"Report_Entry.Emergency_Contacts", type text}, {"Report_Entry.Experience_Start_Date", type any}, {"Report_Entry.Gender", type text}, {"Report_Entry.Hire_Date", type date}, {"Report_Entry.Home_Address", type text}, {"Report_Entry.Home_City", type text}, {"Report_Entry.Home_State", type text}, {"Report_Entry.Job_Title", type text}, {"Report_Entry.Location", type text}, {"Report_Entry.Management_Level", type text}, {"Report_Entry.Mobile_Phones", type text}, {"Report_Entry.Pay_Rate_Type", type text}, {"Report_Entry.Phone_Numbers", type text}, {"Report_Entry.Real_Hired_Date", type date}, {"Report_Entry.Reporting_Enterprise", type any}, {"Report_Entry.Supervisory_Organization", type text}, {"Report_Entry.Sales_Level", type any}, {"Report_Entry.Termination_Date", type date}, {"Report_Entry.Worker", type text}, {"Report_Entry.Worker_Company", type text}, {"Report_Entry.Worker_First_Name", type text}, {"Report_Entry.Worker_Full_Name", type text}, {"Report_Entry.Worker_ID", Int64.Type}, {"Report_Entry.Worker_Last_Name", type text}, {"Report_Entry.Worker_Middle_Name", type text}, {"Report_Entry.Worker_Sub_Type", type text}, {"Report_Entry.Worker_Type", type text}, {"Report_Entry.Zip_Code", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

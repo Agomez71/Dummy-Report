@@ -1,0 +1,8 @@
+relationship AutoDetected_ab06f17c-2534-4e8d-8f1b-966a88dac08c
+	fromColumn: dim_wd_workers_timesheets.Worker_ID
+	toColumn: wd_workers.'Report_Entry.Worker_ID'
+
+relationship 53c3aa61-b0eb-ee7c-63d3-38eefb1c174c
+	fromColumn: dim_wd_workers_timesheets.Date
+	toColumn: dim_date.Date
+

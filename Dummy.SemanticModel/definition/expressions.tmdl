@@ -1,0 +1,8 @@
+expression json_wd_workers = "https://wd5-services1.myworkday.com/ccx/service/customreport2/improving/ISU_PowerBI_Mexico/CR_AGM_Workers_MSFabric?format=json" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: d8fb7b13-8508-46e7-aa31-7237ab0c70b9
+	queryGroup: 'Parameters - Connections'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

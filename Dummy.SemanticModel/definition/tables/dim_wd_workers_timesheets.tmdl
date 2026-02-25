@@ -1,0 +1,204 @@
+table dim_wd_workers_timesheets
+	lineageTag: 723ff32e-ad04-4f1f-9d56-06c2bee7a708
+
+	column Billing_Recommendation
+		dataType: string
+		lineageTag: 27c52d7d-23d6-4ba6-afe5-67091de27bac
+		summarizeBy: none
+		sourceColumn: Billing_Recommendation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contract_Type
+		dataType: string
+		lineageTag: c66f9172-1159-4c76-9b4f-d7efe26bc47a
+		summarizeBy: none
+		sourceColumn: Contract_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cost_Center
+		dataType: string
+		lineageTag: 26af3f08-4339-4c15-93ee-50c7657257fa
+		summarizeBy: none
+		sourceColumn: Cost_Center
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5e5f1e95-822c-4298-88f3-398169709221
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Hours
+		dataType: double
+		lineageTag: 33fc9de7-7435-477b-be49-337b6c118f00
+		summarizeBy: sum
+		sourceColumn: Hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PM_Approver
+		dataType: string
+		lineageTag: 5a4560bc-6ba3-4849-a47a-5dc827493a65
+		summarizeBy: none
+		sourceColumn: PM_Approver
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pay_Rate_Type
+		dataType: string
+		lineageTag: ee9f4f9c-a179-4cf8-b6ab-d62a16f22085
+		summarizeBy: none
+		sourceColumn: Pay_Rate_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Project
+		dataType: string
+		lineageTag: afe2e120-a004-46b2-b776-bf6128ae81eb
+		summarizeBy: none
+		sourceColumn: Project
+
+		annotation SummarizationSetBy = Automatic
+
+	column Project_Company
+		dataType: string
+		lineageTag: cf9a478e-c791-44bc-8180-1cda9a28696a
+		summarizeBy: none
+		sourceColumn: Project_Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column Project_Customer
+		dataType: string
+		lineageTag: dfc77780-9ba3-4ead-9285-091c3bdfe250
+		summarizeBy: none
+		sourceColumn: Project_Customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Project_ID
+		dataType: string
+		lineageTag: b02aad2f-58c7-4bb0-8cf4-2038b2af97d0
+		summarizeBy: none
+		sourceColumn: Project_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Project_Plan_Task
+		dataType: string
+		lineageTag: 5a25cd97-2bef-4924-8258-831d99debb42
+		summarizeBy: none
+		sourceColumn: Project_Plan_Task
+
+		annotation SummarizationSetBy = Automatic
+
+	column Project_Role
+		dataType: string
+		lineageTag: c4644c0d-f678-4343-9a00-62cabe52374d
+		summarizeBy: none
+		sourceColumn: Project_Role
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rate_To_Bill
+		dataType: double
+		lineageTag: 0c08a1a1-957d-4af4-ac60-6b247a2c0cef
+		summarizeBy: sum
+		sourceColumn: Rate_To_Bill
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Status
+		dataType: string
+		lineageTag: b0301563-4510-44b3-94d7-8d186aab5d5c
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time_Type
+		dataType: string
+		lineageTag: 5a717035-1891-4d88-a33b-ddbb539aa590
+		summarizeBy: none
+		sourceColumn: Time_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Worker
+		dataType: string
+		lineageTag: 888b317e-c499-45be-937c-a790273dc667
+		summarizeBy: none
+		sourceColumn: Worker
+
+		annotation SummarizationSetBy = Automatic
+
+	column Worker_Company
+		dataType: string
+		lineageTag: b374a467-3e2c-49b8-a92b-94af59abf250
+		summarizeBy: none
+		sourceColumn: Worker_Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column Worker_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b79ac60-894d-4b33-acab-a97fb7b67c68
+		summarizeBy: none
+		sourceColumn: Worker_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Worker_Type
+		dataType: string
+		lineageTag: e586d1be-5252-4c6a-86c3-1e295e0bc6db
+		summarizeBy: none
+		sourceColumn: Worker_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Awaiting_Action_by
+		dataType: string
+		lineageTag: d950b622-139e-4500-ac7b-03d14a84e1b4
+		summarizeBy: none
+		sourceColumn: Awaiting_Action_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comment
+		dataType: string
+		lineageTag: 96d077ce-5932-4c15-b72a-c2f918290caa
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sales_Level
+		dataType: string
+		lineageTag: 84981ffa-a36b-4ae4-8971-420b0e5925bc
+		summarizeBy: none
+		sourceColumn: Sales_Level
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_wd_workers_timesheets = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("fz6cn4sull2etbh24tzpia4kfy-5ispbqsyh6gelfmf5nry645wl4.datawarehouse.fabric.microsoft.com", "Improving_Silver_LH"),
+				    dbo_dim_wd_workers_timesheets = Source{[Schema="dbo",Item="dim_wd_workers_timesheets"]}[Data]
+				in
+				    dbo_dim_wd_workers_timesheets
+

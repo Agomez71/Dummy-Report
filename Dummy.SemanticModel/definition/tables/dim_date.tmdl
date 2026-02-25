@@ -1,0 +1,192 @@
+table dim_date
+	lineageTag: 0d6894e2-5375-4963-b317-fcd4c4faece9
+
+	column Date
+		formatString: Short Date
+		lineageTag: eb786a4d-9aa6-436b-8f8b-e49e763b9d27
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: 6d8c5e24-3484-499f-b0e2-75766593f042
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: 9cb6050c-417c-41b5-9803-8fb4001d1a4f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNum
+		formatString: 0
+		lineageTag: b78f47b2-932b-4ffb-aa1c-822ad6db41c9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthNum]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthShort
+		lineageTag: f76cfe9d-f31d-4190-a34e-d8080da21403
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthShort]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: 98c5e579-2092-4d8f-9ded-574c9578877a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		lineageTag: 466523fd-7290-49d7-8ef9-e45c86ff6dcb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		formatString: 0
+		lineageTag: 338f6ffa-6124-4806-8271-8564aebea4c7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekday]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekdayShort
+		lineageTag: da1a174a-9e17-4751-bc56-43ff71b54cd0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [WeekdayShort]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekend
+		lineageTag: f221f8c0-79a3-4778-a070-6d9480763047
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekend]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekNum
+		formatString: 0
+		lineageTag: ac1d5bd0-ceb4-4a70-8e44-23c613c932e3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [WeekNum]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mon-Day
+		lineageTag: 13003d67-a4fb-4d80-9c9f-4f59efa43dd1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mon-Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year-Month
+		lineageTag: a9cc5101-4aee-4df2-94de-8797284d9fbf
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year-Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'MX Holiday'
+		lineageTag: d7a08189-801f-4dfe-a41f-015a4c2813b1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MX Holiday]
+
+		annotation SummarizationSetBy = Automatic
+
+	column BeforeToday
+		formatString: 0
+		lineageTag: 20265d9a-58f6-4de2-9590-73520a1f4fe3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [BeforeToday]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentDay
+		lineageTag: 1c55a4a3-6cbb-45ac-9b45-715ad20d2f49
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [CurrentDay]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentMonth
+		formatString: 0
+		lineageTag: c1306fe3-d49f-4cfe-aa9d-d87df41143a7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [CurrentMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentYear
+		formatString: 0
+		lineageTag: cbbaacb1-f6bf-477a-b313-c8562771cdc4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [CurrentYear]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_date = calculated
+		mode: import
+		source = ```
+				
+				    VAR _Start_Date = DATE(2025,1,1)
+				    VAR _End_Date = EDATE(TODAY(), 0)
+				
+				RETURN
+				    ADDCOLUMNS(
+				        CALENDAR(_Start_Date, _End_Date),
+				        "Year", YEAR([Date]),
+				        "Quarter", FORMAT([Date], "\QQ"),
+				        "MonthNum", MONTH([Date]),
+				        "MonthShort", FORMAT([Date], "mmm"),
+				        "Month", FORMAT([Date], "mmmm"),
+				        "Day", FORMAT([Date], "d"),
+				        "Weekday", WEEKDAY([Date]),
+				        "WeekdayShort", FORMAT(WEEKDAY([Date]), "ddd"),
+				        "Weekend", IF(WEEKDAY([Date]) IN {1, 7}, "Yes", "No"),
+				        "WeekNum", WEEKNUM([Date]),
+				        "Mon-Day", FORMAT([Date], "mmm") & "-" & FORMAT([Date], "dd"),
+				        "Year-Month", FORMAT([Date], "yyyy") & "-" & FORMAT([Date], "mm"),
+				        "MX Holiday", IF(
+				                        FORMAT([Date], "mmm") & "-" & FORMAT([Date], "dd") 
+				                        IN {"Jan-01", "Feb-05", "Mar-18", "May-01", "Sep-16", "Oct-01", "Nov-18", "Dec-25"},
+				                        "Yes", 
+				                        "No"
+				                    ),
+				        "BeforeToday", IF([Date] <= TODAY(), 1, 0),
+				        "CurrentDay", FORMAT(TODAY(), "d"),        
+				        "CurrentMonth", MONTH(TODAY()),
+				        "CurrentYear", YEAR(TODAY())
+				    )
+				```
+
+	annotation PBI_Id = 58feee33db54450394a06be95bc5f4a8
+

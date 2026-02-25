@@ -1,0 +1,147 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "6bbfc2e150eead193000",
+  "position": {
+    "x": 0,
+    "y": 399.56442831215969,
+    "z": 0,
+    "height": 320.58076225045369,
+    "width": 615.60798548094374,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "wd_workers"
+                    }
+                  },
+                  "Property": "Report_Entry.Worker_ID"
+                }
+              },
+              "queryRef": "wd_workers.Report_Entry.Worker_ID",
+              "nativeQueryRef": "Report_Entry.Worker_ID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "wd_workers"
+                    }
+                  },
+                  "Property": "Report_Entry.Worker"
+                }
+              },
+              "queryRef": "wd_workers.Report_Entry.Worker",
+              "nativeQueryRef": "Report_Entry.Worker"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "wd_workers"
+                    }
+                  },
+                  "Property": "Report_Entry.Hire_Date"
+                }
+              },
+              "queryRef": "wd_workers.Report_Entry.Hire_Date",
+              "nativeQueryRef": "Report_Entry.Hire_Date"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "wd_workers"
+                  }
+                },
+                "Property": "Report_Entry.Hire_Date"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "268.2994526551645D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "wd_workers.Report_Entry.Worker"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "146200c6b7907cbcd102",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "wd_workers"
+              }
+            },
+            "Property": "Report_Entry.Worker_ID"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "43b7333319d7d54bb00e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "wd_workers"
+              }
+            },
+            "Property": "Report_Entry.Worker"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f9f96d3f3c9e6c40890a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "wd_workers"
+              }
+            },
+            "Property": "Report_Entry.Hire_Date"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

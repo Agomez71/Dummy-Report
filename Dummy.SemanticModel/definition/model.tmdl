@@ -1,0 +1,28 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Parameters - Connections'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Workday - Data Sources'
+
+	annotation PBI_QueryGroupOrder = 1
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["json_wd_workers","wd_workers","dim_wd_workers_timesheets"]
+
+ref table wd_workers
+ref table dim_wd_workers_timesheets
+ref table dim_date
+
+ref cultureInfo en-US
+

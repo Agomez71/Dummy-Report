@@ -1,0 +1,76 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "5000f9b8801e027963a3",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 3,
+    "height": 324.06533575317604,
+    "width": 324.06533575317604
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "wd_workers"
+                    }
+                  },
+                  "Property": "Report_Entry.Worker_Company"
+                }
+              },
+              "queryRef": "wd_workers.Report_Entry.Worker_Company",
+              "nativeQueryRef": "Report_Entry.Worker_Company",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ced91d95e5cbd7c9a096",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "wd_workers"
+              }
+            },
+            "Property": "Report_Entry.Worker_Company"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
